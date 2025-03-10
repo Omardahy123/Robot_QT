@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1098</width>
+    <height>708</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTabBar::tab {
+    border: 3px solid #e7e7e7;
+	border-radius: 10px;
+	margin: 5;
+	padding: 5;
+	font: bold; 
+	font-family: arial;
+	font-size: 20px;
+	color: #e7e7e7;
+	width: 100px;
+	height: 30px;
+}
+
+QWidget#centralwidget{
+	background: #1d282b;
+}
+
+
+QTabBar::tab:hover {
+    background: rgba(231, 231, 231, 0.4);
+
+}
+QTabBar::tab:selected {
+    background: #e7e7e7;
+	color: #484848
+}
+
+QTabWidget::pane {
+    border: 0px solid #e7e7e7;
+	background: transparent;
+}
+
+QTabWidget::tab-bar:top {
+    top: 5px;
+}
+
+QTabWidget::tab-bar:bottom {
+    bottom: 0px;
+}
+
+QTabWidget::tab-bar:left {
+    right:0px;
+}
+
+QTabWidget::tab-bar:right {
+    left: 0px;
+}
+QWidget{
+	border: 0px solid #e7e7e7;
+	background: transparent;
+	color: #e7e7e7;
+}
+QFrame#frame_1,#frame_2,#frame_3,#frame_4{
+	border: 3px solid #e7e7e7;
+	border-radius : 20px;
+	font: bold; 
+	font-family: arial;
+	font-size: 30px;
+	color: #e7e7e7;
+	background: transparent;
+}
+
+
+QPushButton{
+	border: 5px solid #f69322;
+    background-color: #f69322;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+}
+QPushButton#main_connect{
+	border: 5px solid #f69322;
+    background-color: #f69322;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+    min-width: 120px;
+    min-height: 30px;
+    max-width: 150px;
+    max-height: 35px;
+}
+QPushButton:hover#main_connect{
+	 background-color:#c67a00;
+}
+
+QPushButton:pressed#main_connect{
+	 background-color: #ffba43;
+}
+
+QPushButton#Set_velocity_button{
+	border: 5px solid #f69322;
+    background-color: #f69322;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+    min-width: 150px;
+    min-height: 30px;
+    max-width: 150px;
+    max-height: 35px;
+}
+QPushButton:hover#Set_velocity_button{
+	 background-color:#c67a00;
+}
+
+QPushButton:pressed#Set_velocity_button{
+	 background-color: #ffba43;
+}
+QPushButton#Offline_indecator{
+	border: 5px solid #de4041;
+    background-color: #de4041;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+}
+QPushButton:hover{
+	 background-color:#c67a00;
+}
+
+QPushButton:pressed{
+	 background-color: #ffba43;
+}
+QComboBox {
+    border: 2px solid #e7e7e7;
+    border-radius: 5px;
+    color: #e7e7e7;
+    font: bold;
+    font-family: Arial;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+QLabel#ComsLabel,#Speed_ratioLabel_2,#ComsLabel_3{
+	margin: 5px;
+	font: bold; 
+	font-family: arial;
+	font-size: 22px;
+	border: 3px solid #e7e7e7;
+    background: #e7e7e7;
+	color: #484848;
+	border-radius: 10px;
+	padding: 7px;
+	padding-left: 17px;
+	padding-right: 17px;
+}
+QLabel#ComsLabel{
+	margin: 5px;
+	font: bold; 
+	font-family: arial;
+	font-size: 22px;
+	border: 3px solid #e7e7e7;
+    background: #e7e7e7;
+	color: #484848;
+	border-radius: 10px;
+	padding: 7px;
+	padding-left: 17px;
+	padding-right: 17px;
+    min-width: 120px;
+    min-height: 30px;
+    max-width: 120px;
+    max-height: 30px;
+
+}
+QLabel#label_Logo{
+	font: bold; 
+	font-family: arial;
+	font-size: 22px;
+	border: 3px solid #e7e7e7;
+   
+	border-radius: 10px;
+
+}
+QLabel#speed_percentages{
+
+	font: bold; 
+	font-family: arial;
+	font-size: 45px;
+}
+
+QSlider::groove:horizontal {
+    border-radius: 3px;
+    height: 4px;
+    margin: 0px;
+	background-color: #e7e7e7;
+}
+
+QSlider::handle:horizontal {
+    background-color:#f69322;
+    border: none;
+    height: 20px;
+    width: 20px;
+    margin: -20px 0;
+    border-radius: 10px;
+    padding: -20px 0px;
+}
+QSlider::handle:horizontal:hover {
+    background-color: #c67a00;
+}
+QSlider::handle:horizontal:pressed {
+    background-color: #ffba43;
+}
+QSlider
+{
+   min-width:550px;
+    min-height: 60px;
+    max-width: 120px;
+    max-height: 70px;
+
+}
+QSpinBox{
+	border: 0px solid #e7e7e7;
+    background: transparent;
+	padding: 3px;
+	border-radius : 5px;
+ 	font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+}
+QPushButton#Stop_button{
+	border: 5px solid #de4041;
+    background-color: #de4041;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+}
+QPushButton:hover#Stop_button{
+	 background-color:#b03030;
+}
+
+QPushButton:pressed#Stop_button{
+	 background-color: #ff8e8a;
+}
+
+
+
+
+
+QRadioButton{
+    border: 0px solid #e7e7e7;
+    margin: 5px;
+    width: 35px;
+    border-radius: 18px;
+    background-color: rgba(231, 231, 231, 1);
+}
+
+
+QRadioButton:unchecked {
+   background-color: rgba(246, 147, 34, 0.6);
+
+}
+
+QRadioButton::indicator{
+    width: 36px;
+   height: 36px;
+   border-radius: 18px;
+}
+
+QRadioButton::indicator::checked{
+    background-color: #f69322;
+    margin-left: 0px;
+}
+
+QRadioButton::indicator:checked:hover
+{
+  background-color: #c67a00;
+}
+
+QRadioButton::indicator:checked:pressed
+{
+     background-color: #ffba43;
+}
+
+QRadioButton::indicator::unchecked 
+{
+  background-color: #f69322;
+   margin-left: 50px;
+}
+
+QRadioButton::indicator:unchecked:hover 
+{
+   background-color: #c67a00;
+}
+
+QRadioButton::indicator:unchecked:pressed 
+{
+    background-color: #ffba43;
+}
+
+QLabel#DarkModeLabel{
+    border: 0px solid #e7e7e7;
+    border-radius : 20px;
+    font: bold; 
+    font-family: arial;
+    font-size: 22px;
+    background-color: transparent;
+    color: #e7e7e7;
+    margin: 0px 0px 0px 20px;
+}
+
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1081</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <property name="styleSheet">
+      <string notr="true">
+# setting_tap{
+    background-color: #f69322;  /* Background color for the first tab */
+    color: blue;  /* Text color for the first tab */
+}</string>
+     </property>
+     <attribute name="title">
+      <string>Settings</string>
+     </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QFrame" name="frame_1">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="ComsLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>170</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="text">
+            <string>Com Ports</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="ComsMenu">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame{
+	border: 2px solid #e7e7e7;
+	border-radius : 5px;
+	font: bold; 
+	font-family: arial;
+	font-size: 20px;
+	background-color: #1d282b;
+	padding: 10px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="main_connect">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>130</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Connect</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="Speed_ratioLabel_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="text">
+            <string>Speed Ratio</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="speed_percentages">
+           <property name="text">
+            <string>20 %</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="horizontalSlider">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Set_velocity_button">
+           <property name="text">
+            <string>Set</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_3">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <widget class="QLabel" name="ComsLabel_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>186</width>
+           <height>55</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>Set Position</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::PlainText</enum>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>10</y>
+           <width>701</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="J1_button">
+            <property name="text">
+             <string>J1 = </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="J3_button">
+            <property name="text">
+             <string>J3 = </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="J2_button">
+            <property name="text">
+             <string>J2 = </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="J4_button">
+            <property name="text">
+             <string>J4 = </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="J5_button">
+            <property name="text">
+             <string>J5 = </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="J6_button">
+            <property name="text">
+             <string>J6 = </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>90</y>
+           <width>701</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QSpinBox" name="J1_set_box"/>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="J2_set_box"/>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="J3_set_box"/>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="J4_set_box"/>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="J5_set_box"/>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="J6_set_box"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Teach</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Debug</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>530</y>
+      <width>1061</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <widget class="QPushButton" name="Reset_button">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>10</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Stop_button">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>11</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>10</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>10</width>
+       <height>5</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="DarkModeLabel">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>20</y>
+       <width>143</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dark mode</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>610</y>
+      <width>1061</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_Logo">
+     <property name="geometry">
+      <rect>
+       <x>870</x>
+       <y>10</y>
+       <width>181</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../images/BedoLogo.PNG</pixmap>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Offline_indecator">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Offline</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
