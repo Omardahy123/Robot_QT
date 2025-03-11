@@ -1,0 +1,2605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+QMainWindow{
+
+    min-width: 1100px;
+    min-height: 800px;
+    max-width: 1100px;
+    max-height: 750px;
+
+
+}
+QTabBar::tab {
+    border: 3px solid #e7e7e7;
+	border-radius: 10px;
+	margin: 5;
+	padding: 5;
+	font: bold; 
+	font-family: arial;
+	font-size: 20px;
+	color: #e7e7e7;
+	width: 100px;
+	height: 30px;
+}
+
+QWidget#centralwidget{
+	background: #1d282b;
+}
+
+
+QTabBar::tab:hover {
+    background: rgba(231, 231, 231, 0.4);
+
+}
+QTabBar::tab:selected {
+    background: #e7e7e7;
+	color: #484848
+}
+
+QTabWidget::pane {
+    border: 0px solid #e7e7e7;
+	background: transparent;
+}
+
+QTabWidget::tab-bar:top {
+    top: 5px;
+}
+
+QTabWidget::tab-bar:bottom {
+    bottom: 0px;
+}
+
+QTabWidget::tab-bar:left {
+    right:0px;
+}
+
+QTabWidget::tab-bar:right {
+    left: 0px;
+}
+QWidget{
+	border: 0px solid #e7e7e7;
+	background: transparent;
+	color: #e7e7e7;
+}
+QFrame#frame_1,#frame_2,#frame_3,#frame_4,#frame2_1,#frame2_2,#frame3_1,#frame3_2,#frame3_3,#frame3_4,#frame3_5,#Import_frame,#buttons_frame,#IO_Frame
+{
+	border: 3px solid #e7e7e7;
+	border-radius : 20px;
+	font: bold; 
+	font-family: arial;
+	font-size: 30px;
+	color: #e7e7e7;
+	background: transparent;
+}
+QFrame#tabWidget
+{
+	border: 3px solid #e7e7e7;
+	border-radius : 20px;
+	font: bold; 
+	font-family: arial;
+	font-size: 30px;
+	color: #e7e7e7;
+	background: transparent;
+}
+
+QPushButton{
+	border: 5px solid #f69322;
+    background-color: #f69322;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+}
+QPushButton#main_connect,#SerialSend_pushButton{
+	border: 5px solid #f69322;
+    background-color: #f69322;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+    min-width: 120px;
+    min-height: 30px;
+    max-width: 150px;
+    max-height: 35px;
+}
+QPushButton:hover#SerialSend_pushButton{
+	 background-color:#c67a00;
+}
+
+QPushButton:pressed#SerialSend_pushButton{
+	 background-color: #ffba43;
+}
+QPushButton:hover#main_connect{
+	 background-color:#c67a00;
+}
+
+QPushButton:pressed#main_connect{
+	 background-color: #ffba43;
+}
+
+QPushButton#Set_velocity_button{
+	border: 5px solid #f69322;
+    background-color: #f69322;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+    min-width: 150px;
+    min-height: 30px;
+    max-width: 150px;
+    max-height: 35px;
+}
+QPushButton:hover#Set_velocity_button{
+	 background-color:#c67a00;
+}
+
+QPushButton:pressed#Set_velocity_button{
+	 background-color: #ffba43;
+}
+QPushButton#Offline_indecator{
+	border: 5px solid #de4041;
+    background-color: #de4041;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+}
+QPushButton:hover{
+	 background-color:#c67a00;
+}
+
+QPushButton:pressed{
+	 background-color: #ffba43;
+}
+QComboBox {
+    border: 2px solid #e7e7e7;
+    border-radius: 5px;
+    color: #e7e7e7;
+    font: bold;
+    font-family: Arial;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+QLabel#ComsLabel,#Speed_ratioLabel_2,#ComsLabel_3,#Debug_step_Label,#Outputs_label{
+	margin: 5px;
+	font: bold; 
+	font-family: arial;
+	font-size: 22px;
+	border: 3px solid #e7e7e7;
+    background: #e7e7e7;
+	color: #484848;
+	border-radius: 10px;
+	padding: 7px;
+	padding-left: 17px;
+	padding-right: 17px;
+}
+
+
+
+QLabel{	font: bold; 
+	font-family: arial;
+	font-size: 30px;
+
+}
+QLabel#ComsLabel,#Serial_send_label{
+	margin: 5px;
+	font: bold; 
+	font-family: arial;
+	font-size: 22px;
+	border: 3px solid #e7e7e7;
+    background: #e7e7e7;
+	color: #484848;
+	border-radius: 10px;
+	padding: 7px;
+	padding-left: 17px;
+	padding-right: 17px;
+    min-width: 130px;
+    min-height: 30px;
+    max-width: 120px;
+    max-height: 30px;
+
+}
+
+QLabel#X_label_debug,#Y_label_debug,#Z_label_debug,#A_label_debug,#B_label_debug,#C_label_debug,#J1_label_debug,#J2_label_debug,#J3_label_debug,#J4_label_debug,#J5_label_debug,#J6_label_debug{
+
+	font: bold; 
+	font-family: arial;
+	font-size: 22px;
+	border: 3px solid #e7e7e7;
+    background: #e7e7e7;
+	color: #484848;
+	border-radius: 10px;
+}
+
+QLabel#Serial_Recieve_Label
+{
+	margin: 5px;
+	font: bold; 
+	font-family: arial;
+	font-size: 22px;
+	border: 3px solid #e7e7e7;
+    background: #e7e7e7;
+	color: #484848;
+	border-radius: 10px;
+	padding: 7px;
+	padding-left: 17px;
+	padding-right: 17px;
+    min-width: 150px;
+    min-height: 30px;
+    max-width: 150px;
+    max-height: 30px;
+
+}
+QLabel#label_Logo{
+	font: bold; 
+	font-family: arial;
+	font-size: 22px;
+	border: 3px solid #e7e7e7;
+   
+	border-radius: 10px;
+
+}
+QLabel#speed_percentages{
+
+	font: bold; 
+	font-family: arial;
+	font-size: 45px;
+}
+
+QSlider::groove:horizontal {
+    border-radius: 3px;
+    height: 4px;
+    margin: 0px;
+	background-color: #e7e7e7;
+}
+
+QSlider::handle:horizontal {
+    background-color:#f69322;
+    border: none;
+    height: 20px;
+    width: 20px;
+    margin: -20px 0;
+    border-radius: 10px;
+    padding: -20px 0px;
+}
+QSlider::handle:horizontal:hover {
+    background-color: #c67a00;
+}
+QSlider::handle:horizontal:pressed {
+    background-color: #ffba43;
+}
+QSlider
+{
+   min-width:550px;
+    min-height: 60px;
+    max-width: 120px;
+    max-height: 70px;
+
+}
+QSpinBox{
+	border: 0px solid #e7e7e7;
+    background: transparent;
+	padding: 3px;
+	border-radius : 5px;
+ 	font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+}
+QPushButton#Stop_button,#Import_file_Delete{
+	border: 5px solid #de4041;
+    background-color: #de4041;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+}
+
+QPushButton:hover#Import_file_Delete{
+	 background-color:#b03030;
+}
+
+QPushButton:pressed#Import_file_Delete{
+	 background-color: #ff8e8a;
+}
+QPushButton:hover#Stop_button{
+	 background-color:#b03030;
+}
+
+QPushButton:pressed#Stop_button{
+	 background-color: #ff8e8a;
+}
+
+QPushButton#Import_file_Download
+{
+	border: 5px solid #4f9ac9;
+    background-color: #4f9ac9;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+}
+
+QPushButton:hover#Import_file_Download{
+	 background-color:#1b80bf;
+}
+
+QPushButton:pressed#Import_file_Download{
+	 background-color: #7db1d1;
+}
+
+
+QPushButton#Import_file_Run
+{
+	border: 5px solid #3ed650;
+    background-color: #3ed650;
+    font-family: arial;
+    font-size: 30px;
+	font: bold;
+    color: #e7e7e7;
+    border-radius: 15%;
+}
+
+QPushButton:hover#Import_file_Run{
+	 background-color:#0aad36;
+}
+
+QPushButton:pressed#Import_file_Run{
+	 background-color: #6ded8f;
+}
+
+
+
+QRadioButton{
+    border: 0px solid #e7e7e7;
+    margin: 5px;
+    width: 35px;
+    border-radius: 18px;
+   background-color: rgba(246, 147, 34, 0.6);
+}
+
+
+QRadioButton:unchecked {
+    background-color: rgba(231, 231, 231, 1);
+
+}
+
+QRadioButton::indicator{
+    width: 36px;
+   height: 36px;
+   border-radius: 18px;
+}
+
+QRadioButton::indicator::checked{
+    background-color: #f69322;
+    margin-left: 50px;
+}
+
+QRadioButton::indicator:checked:hover
+{
+  background-color: #c67a00;
+}
+
+QRadioButton::indicator:checked:pressed
+{
+     background-color: #ffba43;
+}
+
+QRadioButton::indicator::unchecked 
+{
+  background-color: #f69322;
+   margin-left: 0px;
+}
+
+QRadioButton::indicator:unchecked:hover 
+{
+   background-color: #c67a00;
+}
+
+QRadioButton::indicator:unchecked:pressed 
+{
+    background-color: #ffba43;
+}
+
+
+
+
+QRadioButton#Dark_Light_switch{
+    border: 0px solid #e7e7e7;
+    margin: 5px;
+    width: 35px;
+    border-radius: 18px;
+    background-color: rgba(231, 231, 231, 1);
+}
+
+
+QRadioButton:unchecked#Dark_Light_switch {
+   background-color: rgba(246, 147, 34, 0.6);
+
+}
+
+QRadioButton::indicator#Dark_Light_switch{
+    width: 36px;
+   height: 36px;
+   border-radius: 18px;
+}
+
+QRadioButton::indicator::checked#Dark_Light_switch{
+    background-color: #f69322;
+    margin-left: 0px;
+}
+
+QRadioButton::indicator:checked:hove#Dark_Light_switchr
+{
+  background-color: #c67a00;
+}
+
+QRadioButton::indicator:checked:pressed#Dark_Light_switch
+{
+     background-color: #ffba43;
+}
+
+QRadioButton::indicator::unchecked#Dark_Light_switch
+{
+  background-color: #f69322;
+   margin-left: 50px;
+}
+
+QRadioButton::indicator:unchecked:hover#Dark_Light_switch 
+{
+   background-color: #c67a00;
+}
+
+QRadioButton::indicator:unchecked:pressed#Dark_Light_switch 
+{
+    background-color: #ffba43;
+}
+
+
+
+
+
+QLabel#DarkModeLabel{
+    border: 0px solid #e7e7e7;
+    border-radius : 20px;
+    font: bold; 
+    font-family: arial;
+    font-size: 22px;
+    background-color: transparent;
+    color: #e7e7e7;
+    margin: 0px 0px 0px 20px;
+}
+
+QLineEdit#Serial_Input{
+   border: 2px solid #e7e7e7;
+   border-radius: 10px;
+   color: #e7e7e7;
+   font: bold; 
+   font-family: arial;
+   font-size: 20px;
+    min-height: 40px;
+    max-height: 35px;
+}
+QTextEdit{
+   border: 2px solid #e7e7e7;
+   border-radius: 10px;
+   color: #e7e7e7;
+   font: bold; 
+   font-family: arial;
+   font-size: 20px;
+
+}
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1081</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Settings_Tab">
+     <property name="styleSheet">
+      <string notr="true">
+# setting_tap{
+    background-color: #f69322;  /* Background color for the first tab */
+    color: blue;  /* Text color for the first tab */
+}</string>
+     </property>
+     <attribute name="title">
+      <string>Settings</string>
+     </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QFrame" name="frame_1">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="ComsLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>170</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="text">
+            <string>Com Ports</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="ComsMenu">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame{
+	border: 2px solid #e7e7e7;
+	border-radius : 5px;
+	font: bold; 
+	font-family: arial;
+	font-size: 20px;
+	background-color: #1d282b;
+	padding: 10px;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="main_connect">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>130</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Connect</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="Speed_ratioLabel_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="text">
+            <string>Speed Ratio</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="speed_percentages">
+           <property name="text">
+            <string>20 %</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="horizontalSlider">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Set_velocity_button">
+           <property name="text">
+            <string>Set</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_3">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <widget class="QLabel" name="ComsLabel_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>186</width>
+           <height>55</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>Set Position</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::PlainText</enum>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>10</y>
+           <width>791</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="J1_SetPose">
+              <property name="text">
+               <string>J1 = </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="J3_SetPose">
+              <property name="text">
+               <string>J3 = </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="J2_SetPose">
+              <property name="text">
+               <string>J2 = </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="J4_SetPose">
+              <property name="text">
+               <string>J4 = </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="J5_SetPose">
+              <property name="text">
+               <string>J5 = </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="J6_SetPose">
+              <property name="text">
+               <string>J6 = </string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QSpinBox" name="J1_set_box_SetPose">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="J2_set_box_SetPose">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="J3_set_box_SetPose">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="J4_set_box_SetPose">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="J5_set_box_SetPose">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="J6_set_box_SetPose">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="Teach_Tab">
+     <attribute name="title">
+      <string>Teach</string>
+     </attribute>
+     <widget class="QFrame" name="frame2_1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>1071</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="Serial_send_label">
+         <property name="text">
+          <string>Serial Send</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Serial_Input"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="SerialSend_pushButton">
+         <property name="text">
+          <string>Send</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame2_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>140</y>
+        <width>1071</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>-90</y>
+         <width>202</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="Serial_Recieve_Label">
+          <property name="text">
+           <string>Serial Receive</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="SerialSend_pushButton_2">
+          <property name="text">
+           <string>Clear</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QTextEdit" name="Serial_Recive">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>20</y>
+         <width>821</width>
+         <height>371</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Debug_Tab">
+     <attribute name="title">
+      <string>Debug</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>701</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QFrame" name="frame3_1">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="Debug_Joints_GO">
+          <property name="geometry">
+           <rect>
+            <x>620</x>
+            <y>60</y>
+            <width>71</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>GO</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>611</width>
+            <height>151</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QPushButton" name="DebugButton_J_1">
+               <property name="text">
+                <string>J1</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="DebugButton_J_2">
+               <property name="text">
+                <string>J2</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="DebugButton_J_3">
+               <property name="text">
+                <string>J3</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="DebugButton_J_4">
+               <property name="text">
+                <string>J4</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="DebugButton_J_5">
+               <property name="text">
+                <string>J5</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="DebugButton_J_6">
+               <property name="text">
+                <string>J6</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_J_1"/>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_J_2"/>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_J_3"/>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_J_4"/>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_J_5"/>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_J_6"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame3_2">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="Debug_Cord_GO">
+          <property name="geometry">
+           <rect>
+            <x>620</x>
+            <y>60</y>
+            <width>71</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>GO</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>601</width>
+            <height>151</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QPushButton" name="DebugButton_X_GO">
+               <property name="text">
+                <string>X</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="DebugButton_Y_GO">
+               <property name="text">
+                <string>Y</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="DebugButton_Z_GO">
+               <property name="text">
+                <string>Z</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="DebugButton_A_GO">
+               <property name="text">
+                <string>A</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="DebugButton_B_GO">
+               <property name="text">
+                <string>B</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="DebugButton_C_GO">
+               <property name="text">
+                <string>C</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_X"/>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_Y"/>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_Z"/>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_A"/>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_B"/>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_debug_C"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame3_3">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="Debug_step_Label">
+          <property name="geometry">
+           <rect>
+            <x>580</x>
+            <y>40</y>
+            <width>111</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Step</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBox_13">
+          <property name="geometry">
+           <rect>
+            <x>590</x>
+            <y>100</y>
+            <width>98</width>
+            <height>43</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>571</width>
+            <height>181</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="Standby_Pos_button">
+             <property name="text">
+              <string>Standby Position</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="Close_Gripper_button">
+             <property name="text">
+              <string>Close Gripper</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="Open_Gripper_button">
+             <property name="text">
+              <string>Open Gripper</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="Zero_pos_button">
+             <property name="text">
+              <string>Zero Position</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>9</y>
+        <width>361</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QFrame" name="frame3_4">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>10</y>
+            <width>161</width>
+            <height>542</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <widget class="QLabel" name="X_label_debug">
+             <property name="text">
+              <string>x</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <item>
+              <widget class="QPushButton" name="Debug_X_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_X_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_X_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="Y_label_debug">
+             <property name="text">
+              <string>Y</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="QPushButton" name="Debug_Y_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_Y_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_Y_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="Z_label_debug">
+             <property name="text">
+              <string>Z</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="QPushButton" name="Debug_Z_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_Z_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_Z_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="A_label_debug">
+             <property name="text">
+              <string>A</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_13">
+             <item>
+              <widget class="QPushButton" name="Debug_A_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_A_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_A_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="B_label_debug">
+             <property name="text">
+              <string>B</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_19">
+             <item>
+              <widget class="QPushButton" name="Debug_B_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_B_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_B_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="C_label_debug">
+             <property name="text">
+              <string>C</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_14">
+             <item>
+              <widget class="QPushButton" name="Debug_C_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_C_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_C_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame3_5">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>12</y>
+            <width>151</width>
+            <height>542</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_10">
+           <item>
+            <widget class="QLabel" name="J1_label_debug">
+             <property name="text">
+              <string>J1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_21">
+             <item>
+              <widget class="QPushButton" name="Debug_J1_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_J1_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_J1_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="J2_label_debug">
+             <property name="text">
+              <string>J2</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_22">
+             <item>
+              <widget class="QPushButton" name="Debug_J2_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_J2_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_J2_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="J3_label_debug">
+             <property name="text">
+              <string>J3</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_23">
+             <item>
+              <widget class="QPushButton" name="Debug_J3_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_J3_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_J3_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="J4_label_debug">
+             <property name="text">
+              <string>J4</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_24">
+             <item>
+              <widget class="QPushButton" name="Debug_J4_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_J4_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_J4_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="J5_label_debug">
+             <property name="text">
+              <string>J5</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_25">
+             <item>
+              <widget class="QPushButton" name="Debug_J5_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_J5_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_J5_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="J6_label_debug">
+             <property name="text">
+              <string>J6</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_26">
+             <item>
+              <widget class="QPushButton" name="Debug_J6_Plus">
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="Debug_J6_Value">
+               <property name="text">
+                <string>300</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Debug_J6_Minus">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="File_Tab">
+     <attribute name="title">
+      <string>File</string>
+     </attribute>
+     <widget class="QFrame" name="Import_frame">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>621</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>10</y>
+         <width>601</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_27">
+        <item>
+         <widget class="QTextBrowser" name="Import_file_text">
+          <property name="maximumSize">
+           <size>
+            <width>491</width>
+            <height>59</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Import_file_Button">
+          <property name="text">
+           <string>Import</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="buttons_frame">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>621</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>20</y>
+         <width>611</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_28">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_25">
+          <item>
+           <widget class="QPushButton" name="Import_file_Run">
+            <property name="text">
+             <string>Run</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="Import_file_Download">
+            <property name="text">
+             <string>Download</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_26">
+          <item>
+           <widget class="QPushButton" name="Import_file_Pause">
+            <property name="text">
+             <string>Pause</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="Import_file_Delete">
+            <property name="text">
+             <string>Delete</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QTextEdit" name="Import_File_text">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>20</y>
+        <width>431</width>
+        <height>531</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="IO_Tab">
+     <attribute name="title">
+      <string>I/O</string>
+     </attribute>
+     <widget class="QFrame" name="IO_Frame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>1071</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="Outputs_label">
+       <property name="geometry">
+        <rect>
+         <x>460</x>
+         <y>20</y>
+         <width>151</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Outputs</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>1031</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_27">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_29">
+          <item>
+           <widget class="QLabel" name="Label_switch_0">
+            <property name="text">
+             <string>Output 0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_0">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_1">
+            <property name="text">
+             <string>Output 1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_1">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_2">
+            <property name="text">
+             <string>Output 2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_2">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string/>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_3">
+            <property name="text">
+             <string>Output 3</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_3">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string/>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_33">
+          <item>
+           <widget class="QLabel" name="Label_switch_4">
+            <property name="text">
+             <string>Output 4</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_4">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_5">
+            <property name="text">
+             <string>Output 5</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_5">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_6">
+            <property name="text">
+             <string>Output 6</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_6">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string/>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_7">
+            <property name="text">
+             <string>Output 7</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_7">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string/>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_35">
+          <item>
+           <widget class="QLabel" name="Label_switch_8">
+            <property name="text">
+             <string>Output 8</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_8">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_9">
+            <property name="text">
+             <string>Output 9</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_9">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_10">
+            <property name="text">
+             <string>Output 10</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_10">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string/>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_11">
+            <property name="text">
+             <string>Output 11</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_11">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string/>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_34">
+          <item>
+           <widget class="QLabel" name="Label_switch_12">
+            <property name="text">
+             <string>Output 12</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_12">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_13">
+            <property name="text">
+             <string>Output 13</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_13">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_14">
+            <property name="text">
+             <string>Output 14</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_14">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string/>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Label_switch_15">
+            <property name="text">
+             <string>Output 15</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="Output_switch_15">
+            <property name="maximumSize">
+             <size>
+              <width>99</width>
+              <height>46</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>10</width>
+              <height>5</height>
+             </size>
+            </property>
+            <property name="shortcut">
+             <string/>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>640</y>
+      <width>1071</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <widget class="QPushButton" name="Reset_button">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>10</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Stop_button">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>11</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="Dark_Light_switch">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>10</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>10</width>
+       <height>5</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="DarkModeLabel">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>20</y>
+       <width>143</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dark mode</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>710</y>
+      <width>1081</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="Offline_indecator">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Offline</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Logo">
+     <property name="geometry">
+      <rect>
+       <x>880</x>
+       <y>10</y>
+       <width>181</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../images/BedoLogo.PNG</pixmap>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>2</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5"/>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>2</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6"/>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
